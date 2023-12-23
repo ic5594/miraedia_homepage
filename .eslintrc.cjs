@@ -6,9 +6,12 @@ module.exports = {
   extends: [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
-    "@vue/eslint-config-prettier",
+    // "@vue/eslint-config-prettier",
   ],
   rules: {
     "vue/multi-word-component-names": "off",
   },
+  env: {
+    node: true
+  }
 };
