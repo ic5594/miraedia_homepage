@@ -19,12 +19,12 @@ defineProps({
     text: String,
     class: String,
   },
-  description: {
-    type: [String, Object],
-    required: true,
-    text: String,
-    class: String,
-  },
+//   description: {
+//     type: [String, Object],
+//     required: true,
+//     text: String,
+//     class: String,
+//   },
   col: {
     type: String,
     default: "",
@@ -57,9 +57,9 @@ export default {
       >
         {{ typeof title == "string" ? title : title.text }}
       </h5>
-      <p :class="typeof description == 'string' ? 'pe-5' : description.class">
+      <!-- <p :class="typeof description == 'string' ? 'pe-5' : description.class">
         {{ typeof description == "string" ? description : description.text }}
-      </p>
+      </p> -->
     </div>
   </div>
 </template>

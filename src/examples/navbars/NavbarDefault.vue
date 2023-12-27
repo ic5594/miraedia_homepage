@@ -17,7 +17,7 @@
                     : 'text-white font-weight-bolder ms-sm-3'
             ]" :to="{ name: 'presentation' }" rel="tooltip" title="Designed and Coded by Creative Tim"
                 data-placement="bottom">
-                <img src="../../assets/img/logo_1.png" />
+                <img style="width: 6rem;" src="../../assets/img/logo_1.png" />
             </RouterLink>
             <RouterLink class="navbar-brand d-block d-md-none" :class="props.transparent || props.dark
                     ? 'text-white'
@@ -60,8 +60,8 @@
                                                 {{ item.menu }}
                                             </div>
                                             <template v-for="(itemCh) in item.list" :key="itemCh">
-                                                <RouterLink :to="{ name: 'about' }" class="dropdown-item border-radius-md">
-                                                    <span>{{ itemCh }}</span>
+                                                <RouterLink :to="{ name: 'about', query: itemCh.query }" class="dropdown-item border-radius-md">
+                                                    <span>{{ itemCh.name }}</span>
                                                 </RouterLink>
                                             </template>
                                         </div>
@@ -128,12 +128,21 @@ const props = defineProps({
 });
 
 const menuList = ref([
-    {menu: '회사소개', list: ['인사말', '주요거래선', '약도', 'E-mail']},
-    {menu: '레진 다이아몬드', list: ['성형 휠', '휠 커터']},
-    {menu: '메탈 다이아몬드', list: ['메탈 휠', '코아비트']},
-    {menu: '전착 다이아몬드', list: ['로터리 휠', ' I.D 휠', 'DISK & POINTER', '전착 커터(톱)']},
-    {menu: 'INSERT', list: ['PCD & PCBN', '초경 인서트']},
-    {menu: 'TOOLING', list: ['휠 형상', '입도 환산표']},
+    {menu: '회사소개', list: [{name: '인사말', query: {type: 'greeting'}}, 
+                        {name: '주요거래선', query: {type: 'trading'}},
+                        {name: '약도', query: {type: 'map'}}]},
+    {menu: '레진 다이아몬드', list: [{name: '성형 휠', query: {type: 'surgery'}},
+                        {name: '휠 커터', query: {type: 'cutter'}}]},
+    {menu: '메탈 다이아몬드', list: [{name: '메탈 휠', query: {type: 'metal'}},
+                        {name: '코아비트', query: {type: 'cora'}}]},
+    {menu: '전착 다이아몬드', list: [{name: '로터리 휠', query: {type: 'lotari'}},
+                        {name: 'I.D 휠', query: {type: 'id'}},
+                        {name: 'DISK & POINTER', query: {type: 'disk'}},
+                        {name: '전착 커터(톱)', query: {type: 'electrode'}}]},
+    {menu: 'INSERT', list: [{name: 'PCD & PCBN', query: {type: 'pcd'}},
+                        {name: '초경 인서트', query: {type: 'insert'}}]},
+    {menu: 'TOOLING', list: [{name: '휠 형상', query: {type: 'shape'}},
+                        {name: '입도 환산표', query: {type: 'table'}}]},
 ])
 
 // set arrow  color
