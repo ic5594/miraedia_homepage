@@ -1,59 +1,59 @@
 <script setup>
 defineProps({
-  size: {
-    type: String,
-    validator(size) {
-      return ["sm", "md", "lg"].includes(size);
+    size: {
+        type: String,
+        validator(size) {
+            return ["sm", "md", "lg"].includes(size);
+        },
+        default: "md"
     },
-    default: "md"
-  },
-  color: {
-    validator(color) {
-      return [
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "danger",
-        "light",
-        "dark",
-        "white"
-      ].includes(color);
+    color: {
+        validator(color) {
+            return [
+                "primary",
+                "secondary",
+                "info",
+                "success",
+                "warning",
+                "error",
+                "danger",
+                "light",
+                "dark",
+                "white"
+            ].includes(color);
+        },
+        default: "success"
     },
-    default: "success"
-  },
-  variant: {
-    type: String,
-    validator(variant) {
-      return ["fill", "gradient"].includes(variant);
+    variant: {
+        type: String,
+        validator(variant) {
+            return ["fill", "gradient"].includes(variant);
+        },
+        default: "fill"
     },
-    default: "fill"
-  },
-  rounded: {
-    type: Boolean,
-    default: false
-  }
+    rounded: {
+        type: Boolean,
+        default: false
+    }
 });
 
 function getClasses(variant, color, size, rounded) {
-  let colorValue, sizeValue, roundedValue;
+    let colorValue, sizeValue, roundedValue;
 
-  if (variant === "gradient") {
-    colorValue = `bg-gradient-${color}`;
-  } else {
-    colorValue = `badge-${color} bg-${color}`;
-  }
+    if (variant === "gradient") {
+        colorValue = `bg-gradient-${color}`;
+    } else {
+        colorValue = `badge-${color} bg-${color}`;
+    }
 
-  sizeValue = size && `badge-${size}`;
-  roundedValue = rounded && "rounded-pill";
+    sizeValue = size && `badge-${size}`;
+    roundedValue = rounded && "rounded-pill";
 
-  return `${colorValue} ${sizeValue} ${roundedValue}`;
+    return `${colorValue} ${sizeValue} ${roundedValue}`;
 }
 </script>
 <template>
-  <span class="badge" :class="getClasses(variant, color, size, rounded)">
-    <slot />
-  </span>
+    <span class="badge" :class="getClasses(variant, color, size, rounded)">
+        <slot />
+    </span>
 </template>
