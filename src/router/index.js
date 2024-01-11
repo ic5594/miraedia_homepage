@@ -142,6 +142,9 @@ const router = createRouter({
             component: ElTypography,
         },
     ],
+    scrollBehavior() {
+        return { top: 0 }
+    }
 });
 
 export default router;
