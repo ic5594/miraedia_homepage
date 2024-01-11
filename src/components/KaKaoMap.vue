@@ -37,7 +37,7 @@ const initMap = () => {
 
     var geocoder = new kakao.maps.services.Geocoder()
 
-    geocoder.addressSearch('경기 수원시 권선구 권선로 308-18 수원종합공구단지 302동', function(result, status) {
+    geocoder.addressSearch('경기 수원시 권선구 고색동 986번지 수원종합공구단지 302동', function(result, status) {
         // 정상적으로 검색이 완료됐으면 
         if (status === kakao.maps.services.Status.OK) {
             var coords = new kakao.maps.LatLng(result[0].y, result[0].x);

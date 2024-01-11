@@ -26,7 +26,7 @@ defineProps({
 </script>
 <template>
     <div class="card">
-        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+        <div class="card-header p-0 position-relative mx-3 z-index-2">
             <a :href="action.route" class="d-block blur-shadow-image" style="display: flex !important; justify-content: center;">
                 <img :src="image" :alt="title" class="img-fluid border-radius-lg" />
             </a>

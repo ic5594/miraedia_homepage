@@ -2,14 +2,14 @@
     <nav class="navbar navbar-expand-lg top-0" :class="{
         'z-index-3 w-100 shadow-none navbar-transparent position-absolute my-3':
             props.transparent,
-        'my-3 blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mx-4 position-absolute mt-4':
+        'blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 position-absolute mt-4':
             props.sticky,
         'navbar-light bg-white py-3': props.light,
         ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
     }">
         <div :class="props.transparent || props.light || props.dark
-                ? 'container'
-                : 'container-fluid px-0'
+            ? 'container'
+            : 'container-fluid px-0'
             ">
             <RouterLink class="navbar-brand d-none d-md-block" :class="[
                 (props.transparent && textDark.value) || !props.transparent
@@ -17,13 +17,13 @@
                     : 'text-white font-weight-bolder ms-sm-3'
             ]" :to="{ name: 'presentation' }" rel="tooltip" title="Designed and Coded by Creative Tim"
                 data-placement="bottom">
-                <img style="width: 6rem;" src="../../assets/img/logo_1.png" />
+                <img style="width: 6rem;" src="../../assets/img/mireadia/new_logo_01.png" />
             </RouterLink>
             <RouterLink class="navbar-brand d-block d-md-none" :class="props.transparent || props.dark
-                    ? 'text-white'
-                    : 'font-weight-bolder ms-sm-3'
+                ? 'text-white'
+                : 'font-weight-bolder ms-sm-3'
                 " to="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
-                <img src="../../assets/img/logo_1.png" />
+                <img src="../../assets/img/mireadia/new_logo_01.png" style="width: 4rem;"/>
             </RouterLink>
             <!-- <a
         href="https://www.creative-tim.com/product/vue-material-kit-pro"
@@ -43,40 +43,40 @@
                 <ul class="navbar-nav navbar-nav-hover ms-auto">
                     <template v-for="(item) in menuList" :key="item">
                         <li class="nav-item dropdown dropdown-hover mx-2">
-                        <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
-                            :class="getTextColor()" id="dropdownMenuPages" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="material-icons opacity-6 me-2 text-md" :class="getTextColor()">dashboard</i>
-                            {{ item.menu }}
-                            <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-2 d-lg-block d-none" />
-                            <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto" />
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
-                            aria-labelledby="dropdownMenuPages">
-                            <div class="row d-none d-lg-block">
-                                <div class="col-12 px-4 py-2">
-                                    <div class="row">
-                                        <div class="position-relative">
-                                            <div class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
-                                                {{ item.menu }}
+                            <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                                :class="getTextColor()" id="dropdownMenuPages" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img :src="item.icon" style="width: 1rem;">&nbsp;
+                                <!-- <i class="material-icons opacity-6 me-2 text-md" :class="getTextColor()">dashboard</i> -->
+                                {{ item.menu }}
+                                <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-2 d-lg-block d-none" />
+                                <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto" />
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
+                                aria-labelledby="dropdownMenuPages">
+                                <div class="row d-none d-lg-block">
+                                    <div class="col-12 px-4 py-2">
+                                        <div class="row">
+                                            <div class="position-relative">
+                                                <template v-for="(itemCh) in item.list" :key="itemCh">
+                                                    <RouterLink :to="{ name: 'about', query: itemCh.query }"
+                                                        class="dropdown-item border-radius-md">
+                                                        <span>{{ itemCh.name }}</span>
+                                                    </RouterLink>
+                                                </template>
                                             </div>
-                                            <template v-for="(itemCh) in item.list" :key="itemCh">
-                                                <RouterLink :to="{ name: 'about', query: itemCh.query }" class="dropdown-item border-radius-md">
-                                                    <span>{{ itemCh.name }}</span>
-                                                </RouterLink>
-                                            </template>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="d-lg-none">
+                                    <template v-for="(itemCh) in item.list" :key="itemCh">
+                                        <RouterLink :to="{ name: 'about', query: itemCh.query }" class="dropdown-item border-radius-md">
+                                            <span>{{ itemCh.name }}</span>
+                                        </RouterLink>
+                                    </template>
+                                </div>
                             </div>
-                            <div class="d-lg-none">
-                                <template v-for="(itemCh) in item.list" :key="itemCh">
-                                    <RouterLink :to="{ name: 'about' }" class="dropdown-item border-radius-md">
-                                        <span>{{ itemCh }}</span>
-                                    </RouterLink>
-                                </template>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
                     </template>
                 </ul>
             </div>
@@ -90,8 +90,14 @@ import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
 
 // images
 import ArrDark from "@/assets/img/down-arrow-dark.svg";
-// import downArrow from "@/assets/img/down-arrow.svg";
 import DownArrWhite from "@/assets/img/down-arrow-white.svg";
+
+import Icon1 from "@/assets/img/mireadia/invite_icon.png"
+import Icon2 from "@/assets/img/mireadia/jonchack_icon.png"
+import Icon3 from "@/assets/img/mireadia/metal_icon.png"
+import Icon4 from "@/assets/img/mireadia/rejin_icon.png"
+import Icon5 from "@/assets/img/mireadia/insert_icon.png"
+import Icon6 from "@/assets/img/mireadia/tooling_icon.png"
 
 const props = defineProps({
     action: {
@@ -128,21 +134,33 @@ const props = defineProps({
 });
 
 const menuList = ref([
-    {menu: '회사소개', list: [{name: '인사말', query: {type: 'greeting'}}, 
-                        {name: '주요거래선', query: {type: 'trading'}},
-                        {name: '약도', query: {type: 'map'}}]},
-    {menu: '레진 다이아몬드', list: [{name: '성형 휠', query: {type: 'surgery'}},
-                        {name: '휠 커터', query: {type: 'cutter'}}]},
-    {menu: '메탈 다이아몬드', list: [{name: '메탈 휠', query: {type: 'metal'}},
-                        {name: '코아비트', query: {type: 'cora'}}]},
-    {menu: '전착 다이아몬드', list: [{name: '로터리 휠', query: {type: 'lotari'}},
-                        {name: 'I.D 휠', query: {type: 'id'}},
-                        {name: 'DISK & POINTER', query: {type: 'disk'}},
-                        {name: '전착 커터(톱)', query: {type: 'electrode'}}]},
-    {menu: 'INSERT', list: [{name: 'PCD & PCBN', query: {type: 'pcd'}},
-                        {name: '초경 인서트', query: {type: 'insert'}}]},
-    {menu: 'TOOLING', list: [{name: '휠 형상', query: {type: 'shape'}},
-                        {name: '입도 환산표', query: {type: 'table'}}]},
+    {
+        menu: '회사소개', icon: Icon1, list: [{ name: '인사말', query: { type: 'greeting' } },
+        { name: '주요거래선', query: { type: 'trading' } },
+        { name: '약도', query: { type: 'map' } }]
+    },
+    {
+        menu: '레진 다이아몬드', icon: Icon2, list: [{ name: '성형 휠', query: { type: 'surgery' } },
+        { name: '휠 커터', query: { type: 'cutter' } }]
+    },
+    {
+        menu: '메탈 다이아몬드', icon: Icon3, list: [{ name: '메탈 휠', query: { type: 'metal' } },
+        { name: '코아비트', query: { type: 'cora' } }]
+    },
+    {
+        menu: '전착 다이아몬드', icon: Icon4, list: [{ name: '로터리 휠', query: { type: 'lotari' } },
+        { name: 'I.D 휠', query: { type: 'id' } },
+        { name: 'DISK & POINTER', query: { type: 'disk' } },
+        { name: '전착 커터(톱)', query: { type: 'electrode' } }]
+    },
+    {
+        menu: 'INSERT', icon: Icon5, list: [{ name: 'PCD & PCBN', query: { type: 'pcd' } },
+        { name: '초경 인서트', query: { type: 'insert' } }]
+    },
+    {
+        menu: 'TOOLING', icon: Icon6, list: [{ name: '휠 형상', query: { type: 'shape' } },
+        { name: '입도 환산표', query: { type: 'table' } }]
+    },
 ])
 
 // set arrow  color
@@ -193,7 +211,6 @@ watch(
 );
 </script>
 <style scoped>
-.dropdown.nav-item .dropdown-menu-animation.show{
+.dropdown.nav-item .dropdown-menu-animation.show {
     height: 100% !important;
-}
-</style>
+}</style>

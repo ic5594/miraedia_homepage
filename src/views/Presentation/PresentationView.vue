@@ -51,9 +51,10 @@ onUnmounted(() => {
         </div>
     </div>
     <Header>
-        <div class="page-header min-vh-75">
+        <div class="page-header min-vh-65">
             <div class="container">
-                <swiper :spaceBetween="30" 
+                <swiper 
+                    :spaceBetween="30" 
                     :centeredSlides="true" 
                     :autoplay="{
                         delay: 2500,
@@ -68,20 +69,10 @@ onUnmounted(() => {
                     class="mySwiper">
                     <template v-for="(item, index) in mainImg" :key="item">
                         <swiper-slide>
-                            <img class="swiper_area" :src="item" :index="index">
+                            <img style="border-radius: 0.5rem;" class="swiper_area" :src="item" :index="index">
                         </swiper-slide>
                     </template>
                 </swiper>
-                <div class="row">
-                    <div class="col-lg-7 text-center mx-auto position-relative">
-                        <h1 class="text-black pt-5 me-2" :style="{ display: 'inline-block ' }">
-                            미래다이아몬드
-                        </h1>
-                        <p class="lead text-black mt-3" :style="{ fontWeight: '500' }">
-                            산업용 다이아몬드공구 전문기업
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
     </Header>
@@ -93,11 +84,12 @@ onUnmounted(() => {
 </template>
 <style scoped>
 .container {
-    width: 100% !important;
+    width: 95% !important;
     max-width: 100% !important;
     --bs-gutter-x: 0;
 }
 .swiper_area{
     width: 100%; 
 }
+
 </style>
