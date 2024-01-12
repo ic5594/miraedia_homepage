@@ -54,7 +54,7 @@ body {
 /* font */
 @font-face { 
   font-family: "NanumGothic";
-  src: url("./assets/fonts/NanumGothic-Regular.tff") format("truetype");
+  src: url("./assets/fonts/NanumGothic-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
