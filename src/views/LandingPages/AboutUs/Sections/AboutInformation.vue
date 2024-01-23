@@ -17,7 +17,7 @@ watch(route, () => {
 })
 </script>
 <template>
-    <section class="py-7">
+    <section class="py-5">
         <div class="container">
             <div class="row align-items-center" style="justify-content: center;">
                 <template v-if="query == 'greeting'">
