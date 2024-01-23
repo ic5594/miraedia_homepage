@@ -58,20 +58,19 @@ defineProps({
         <div class="container">
             <div class="row">
                 <div class="foot_area">
-                    <img :src="brand.logo" style="width: 5rem;" alt="main_logo" />
+                    <img :src="brand.logo" style="width: 12rem;" alt="main_logo" />
                     <br>
-                    <h6 class="font-weight-bolder mb-4">{{ brand.name }}</h6>
                 </div>
                 <div class="col-12">
                     <div class="text-center">
-                        <p class="text-dark my-4 text-sm font-weight-normal">
+                        <h5 class="text-dark my-4 font-weight-normal">
                             Copyright © 2000-2024 MIRAE DIAMOND Allright Reserved
                             {{ new Date().getFullYear() }}
                             302-213, 986, Gosaek-dong, Gweonsun-gu, Suwon-si, Kyunggi-do, Korea
                             <br>
-                            <a href="javascript: void(0)">Tel: +82-31-254-4670</a>
-                            <a href="javascript: void(0)">Fax: +82-31-363-3976</a>
-                        </p>
+                            Tel: +82-31-254-4670
+                            Fax: +82-31-363-3976
+                        </h5>
                     </div>
                 </div>
             </div>
