@@ -50,7 +50,7 @@
         </div>
 
         <div class="col-sm-9">
-          <h5 class="mb-0">H5 Material Kit</h5>
+          <p class="mb-0">p Material Kit</p>
         </div>
       </div>
 

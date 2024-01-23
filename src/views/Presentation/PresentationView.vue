@@ -51,7 +51,7 @@ onUnmounted(() => {
         </div>
     </div>
     <Header>
-        <div class="page-header min-vh-65">
+        <div class="page-header">
             <div class="container">
                 <swiper 
                     :spaceBetween="30" 
@@ -76,8 +76,8 @@ onUnmounted(() => {
             </div>
         </div>
     </Header>
-
-    <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
+    <!-- shadow-blur -->
+    <div class="card card-body blur shadow-blur">
         <PresentationPages />
     </div>
     <DefaultFooter />
@@ -87,9 +87,15 @@ onUnmounted(() => {
     width: 95% !important;
     max-width: 100% !important;
     --bs-gutter-x: 0;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 .swiper_area{
     width: 100%; 
 }
-
+.shadow-blur{
+    margin: 0 auto;
+    width: 95%;
+    margin-top: 1%;
+}
 </style>

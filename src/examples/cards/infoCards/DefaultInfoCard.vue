@@ -50,13 +50,13 @@ export default {
         >{{ typeof icon == "object" ? icon.component : icon }}</i
       >
       <img v-if="image" :src="image.component" :class="image.class" />
-      <h5
+      <p
         :class="
           typeof title == 'string' ? 'font-weight-bolder mt-3' : title.class
         "
       >
         {{ typeof title == "string" ? title : title.text }}
-      </h5>
+      </p>
       <!-- <p :class="typeof description == 'string' ? 'pe-5' : description.class">
         {{ typeof description == "string" ? description : description.text }}
       </p> -->

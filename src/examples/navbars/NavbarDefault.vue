@@ -1,8 +1,8 @@
 <template>
     <nav class="navbar navbar-expand-lg top-0" :class="{
-        'z-index-3 w-100 shadow-none navbar-transparent position-absolute my-3':
+        'z-index-3 w-100 shadow-none navbar-transparent my-3':
             props.transparent,
-        'blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 position-absolute mt-4':
+        'blur border-radius-lg z-index-3 py-2 shadow py-2 start-0 end-0 mt-4':
             props.sticky,
         'navbar-light bg-white py-3': props.light,
         ' navbar-dark bg-gradient-dark z-index-3 py-3': props.dark,
@@ -10,17 +10,17 @@
         <div :class="props.transparent || props.light || props.dark
             ? 'container'
             : 'container-fluid px-0'
-            ">
+            " style="maxWidth: 100%; justify-content: space-between !important;">
             <RouterLink class="navbar-brand d-none d-md-block" :class="[
                 (props.transparent && textDark.value) || !props.transparent
                     ? 'text-dark font-weight-bolder ms-sm-3'
-                    : 'text-white font-weight-bolder ms-sm-3'
+                    : 'text-dark font-weight-bolder ms-sm-3'
             ]" :to="{ name: 'presentation' }" rel="tooltip" title="Designed and Coded by Creative Tim"
                 data-placement="bottom">
-                <img style="width: 6rem;" src="../../assets/img/mireadia/new_logo_01.png" />
+                <img style="width: 12rem;" src="../../assets/img/mireadia/new_logo_01.png" />
             </RouterLink>
             <RouterLink class="navbar-brand d-block d-md-none" :class="props.transparent || props.dark
-                ? 'text-white'
+                ? 'text-dark'
                 : 'font-weight-bolder ms-sm-3'
                 " to="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
                 <img src="../../assets/img/mireadia/new_logo_01.png" style="width: 4rem;"/>
@@ -46,7 +46,7 @@
                             <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
                                 :class="getTextColor()" id="dropdownMenuPages" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img :src="item.icon" style="width: 1rem;">&nbsp;
+                                <img :src="item.icon" style="width: 2rem;">&nbsp;
                                 <!-- <i class="material-icons opacity-6 me-2 text-md" :class="getTextColor()">dashboard</i> -->
                                 {{ item.menu }}
                                 <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-2 d-lg-block d-none" />
@@ -61,7 +61,7 @@
                                                 <template v-for="(itemCh) in item.list" :key="itemCh">
                                                     <RouterLink :to="{ name: 'about', query: itemCh.query }"
                                                         class="dropdown-item border-radius-md">
-                                                        <span>{{ itemCh.name }}</span>
+                                                        <p>{{ itemCh.name }}</p>
                                                     </RouterLink>
                                                 </template>
                                             </div>
@@ -71,7 +71,7 @@
                                 <div class="d-lg-none">
                                     <template v-for="(itemCh) in item.list" :key="itemCh">
                                         <RouterLink :to="{ name: 'about', query: itemCh.query }" class="dropdown-item border-radius-md">
-                                            <span>{{ itemCh.name }}</span>
+                                            <p  style="margin-bottom: 0;">{{ itemCh.name }}</p>
                                         </RouterLink>
                                     </template>
                                 </div>
@@ -180,7 +180,7 @@ const getTextColor = () => {
     if (props.transparent && textDark.value) {
         color = "text-dark";
     } else if (props.transparent) {
-        color = "text-white";
+        color = "text-dark";
     } else {
         color = "text-dark";
     }
@@ -213,4 +213,9 @@ watch(
 <style scoped>
 .dropdown.nav-item .dropdown-menu-animation.show {
     height: 100% !important;
-}</style>
+}
+
+.navbar .nav-link{
+    font-size: 1.3rem;
+}
+</style>

@@ -78,7 +78,7 @@ body {
     --font-size-h2: 3.3rem;
     --font-size-h3: 3rem;
     --font-size-h4: 2.5rem;
-    --font-size-h5: 2rem;
+    --font-size-p: 2rem;
   }
 }
 
@@ -92,7 +92,7 @@ body {
     --font-size-h2: 3.6rem;
     --font-size-h3: 3rem; 
     --font-size-h4: 2.5rem;
-    --font-size-h5: 2rem;
+    --font-size-p: 2rem;
   }
 }
 
@@ -106,7 +106,7 @@ body {
     --font-size-h2: 3.9rem;
     --font-size-h3: 4rem;
     --font-size-h4: 3rem;
-    --font-size-h5: 2rem;
+    --font-size-p: 2rem;
   }
 }
 
@@ -126,8 +126,8 @@ h4 {
     font-size: calc(1.275rem + 0.3vw)!important;
 }
 
-h5 {
-  font-size: var(--font-size-h5) !important;
+p {
+  font-size: var(--font-size-p) !important;
 }
 
 p {

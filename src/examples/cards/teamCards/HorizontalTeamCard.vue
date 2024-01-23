@@ -38,7 +38,7 @@ defineProps({
       </div>
       <div class="col-lg-8 col-md-6 col-12 my-auto">
         <div class="card-body ps-lg-0">
-          <h5 class="mb-0">{{ profile.name }}</h5>
+          <p class="mb-0">{{ profile.name }}</p>
           <h6 :class="`text-${position.color}`">{{ position.label }}</h6>
           <p class="mb-0">
             {{ description }}

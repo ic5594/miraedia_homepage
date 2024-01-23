@@ -32,9 +32,9 @@ defineProps({
             </a>
         </div>
         <div class="card-body text-center">
-            <h5 class="font-weight-normal">
+            <p class="font-weight-normal">
                 <a href="javascript:;">{{ title }}</a>
-            </h5>
+            </p>
             <p class="mb-0">
                 {{ description }}
             </p>

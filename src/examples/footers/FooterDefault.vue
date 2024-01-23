@@ -63,14 +63,14 @@ defineProps({
                 </div>
                 <div class="col-12">
                     <div class="text-center">
-                        <h5 class="text-dark my-4 font-weight-normal">
+                        <p class="text-dark my-4 font-weight-normal">
                             Copyright © 2000-2024 MIRAE DIAMOND Allright Reserved
                             {{ new Date().getFullYear() }}
                             302-213, 986, Gosaek-dong, Gweonsun-gu, Suwon-si, Kyunggi-do, Korea
                             <br>
                             Tel: +82-31-254-4670
                             Fax: +82-31-363-3976
-                        </h5>
+                        </p>
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ const mobileCheck = ref(window.innerWidth < 1350 ? true : false)
 
 </script>
 <template>
-    <section class="py-5">
+    <section>
         <div class="container mt-5">
             <div class="row">
                 <div class="pre_page_area">
@@ -54,10 +54,10 @@ const mobileCheck = ref(window.innerWidth < 1350 ? true : false)
                     </h2>
                     <div id="typed-strings">
                         <h3>품질 단가 납기에 최선을 다하는 기업
-                            <br><a style="color: darkgray;">미래 다이아몬드</a>
+                            <br>미래 다이아몬드
                         </h3>
                     </div>
-                    <p class="lead mb-4 text-black opacity-7" style="text-align: center;">
+                    <p class="lead text-black opacity-7" style="text-align: center; margin-top: 4rem;">
                         미래다이아몬드 홈페이지 방문을 진심으로 환영합니다.<br>
                         저희는 산업용 다이아몬드 공구분야에서 다양한 경험과 노하우를
                         갖춘 최고의 전문기업입니다.
@@ -66,11 +66,11 @@ const mobileCheck = ref(window.innerWidth < 1350 ? true : false)
 
                 <div class="main_card_area">
                     <div class="main_card_list" :class="{ mobile: mobileCheck }">
-                        <ExampleCard v-for="(item) in mainMenuList" style="width: 15rem;" class="shadow-lg" :key="item"
+                        <ExampleCard v-for="(item) in mainMenuList" class="shadow-lg" :key="item" style="margin: 3% !important;"
                             :title="item.name" :image="item.img" :route="item.route" :query="item.query" />
                     </div>
 
-                    <div class="col-lg-4 mt-lg-0 mt-6">
+                    <div class="col-lg-4 mt-lg-0 mt-5">
                         <CenteredBlogCard :image="BlogCarImg" title="이메일 보내기" description="미래다이아몬드와 소통하기위해 이메일을 보내주세요!" />
                     </div>
                 </div>

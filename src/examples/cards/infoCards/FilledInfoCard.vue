@@ -63,7 +63,7 @@ defineProps({
       icon.component
     }}</i>
     <div class="ps-0 ps-md-3 mt-3 mt-md-0">
-      <h5 :class="`text-${color.text ?? ''}`">{{ title }}</h5>
+      <p :class="`text-${color.text ?? ''}`">{{ title }}</p>
       <p :class="`text-${color.text ?? ''}`">
         {{ description }}
       </p>

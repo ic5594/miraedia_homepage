@@ -38,11 +38,11 @@ defineProps({
       </a>
     </div>
     <div class="card-body px-0">
-      <h5>
+      <p>
         <a :href="action.route" class="text-dark font-weight-bold">{{
           title
         }}</a>
-      </h5>
+      </p>
       <p>
         {{ description }}
       </p>

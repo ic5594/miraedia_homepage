@@ -47,7 +47,7 @@ export default {
     <RouterLink :to="{ name: route, query: query }">
         <div class="card move-on-hover" v-bind="$attrs" :data-bs-toggle="pro ? 'tooltip' : null"
             :data-bs-placement="pro ? 'top' : null" :title="pro ? 'Pro Element' : null">
-            <img class="w-100" style="height: 20rem;" :class="pro && 'opacity-6'" :src="image" :alt="title" loading="lazy" />
+            <img style="height: 25rem; width: 20rem !important;" :class="pro && 'opacity-6'" :src="image" :alt="title" loading="lazy" />
             <svg v-if="pro" class="position-absolute" :style="{ top: 10, right: 10 }" width="24px" height="24px"
                 viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -62,7 +62,7 @@ export default {
             </svg>
         </div>
         <div class="mt-2 ms-2">
-            <h6 class="mb-0" style="text-align: center;">{{ title }}</h6>
+            <p class="mb-0" style="text-align: center;">{{ title }}</p>
             <p class="text-secondary text-sm font-weight-normal">
                 {{ subtitle }}
             </p>

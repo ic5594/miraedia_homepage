@@ -50,7 +50,7 @@ defineProps({
         suffix
       }}
     </h1>
-    <h5 class="mt-3">{{ title }}</h5>
+    <p class="mt-3">{{ title }}</p>
     <p class="text-sm font-weight-normal">
       {{ description }}
     </p>

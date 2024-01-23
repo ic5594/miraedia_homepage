@@ -27,9 +27,9 @@ import MaterialButton from "@/components/MaterialButton.vue";
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
+                <p class="modal-title" id="exampleModalLabel">
                   Your modal title
-                </h5>
+                </p>
                 <MaterialButton
                   color="none"
                   class="btn-close"
