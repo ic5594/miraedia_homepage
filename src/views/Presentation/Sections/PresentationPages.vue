@@ -47,23 +47,24 @@ const mobileCheck = ref(window.innerWidth < 1350 ? true : false)
         <div class="container mt-5">
             <div class="row">
                 <div class="pre_page_area">
-                    <h2 class="text-black" style="height: 10rem; text-align: center;">
+                    <h2 class="text-black" style="text-align: center;">
                         귀사와 함께 할 수 있기를 바랍니다.
                         <br>
-                        <span class="text-black" id="typed"></span>
+                        <div>
+                            <span id="typed" ></span>
+                        </div>
                     </h2>
                     <div id="typed-strings">
                         <h3>품질 단가 납기에 최선을 다하는 기업
                             <br>미래 다이아몬드
                         </h3>
                     </div>
-                    <p class="lead text-black opacity-7" style="text-align: center; margin-top: 4rem;">
+                    <p class="lead text-black opacity-7" style="text-align: center;">
                         미래다이아몬드 홈페이지 방문을 진심으로 환영합니다.<br>
                         저희는 산업용 다이아몬드 공구분야에서 다양한 경험과 노하우를
                         갖춘 최고의 전문기업입니다.
                     </p>
                 </div>
-
                 <div class="main_card_area">
                     <div class="main_card_list" :class="{ mobile: mobileCheck }">
                         <ExampleCard v-for="(item) in mainMenuList" class="shadow-lg" :key="item" style="margin: 3% !important;"
@@ -100,11 +101,11 @@ const mobileCheck = ref(window.innerWidth < 1350 ? true : false)
     align-content: center;
     align-items: center;
 }
-
 .main_card_list {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
+
 </style>

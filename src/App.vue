@@ -13,7 +13,12 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-import { RouterView } from "vue-router";
+import { RouterView } from "vue-router"
+import { onMounted } from "vue"
+
+onMounted(() => {
+    document.body.style.zoom = 70 + '%'
+})
 </script>
 
 <template>
@@ -62,6 +67,7 @@ body {
     font-family: "NanumGothic" !important;
 }
 
+
 :root {
   --font-size-lg: 3rem;
   --font-size-md: 2rem;
@@ -109,7 +115,7 @@ body {
     --font-size-p: 2rem;
   }
 }
-
+/* 
 h1 {
     font-size: calc(1.425rem + 2.1vw)!important;
 }
@@ -144,5 +150,5 @@ blockquote {
 
 .hero {
   font-size: var(--font-size-lg);
-}
+} */
 </style>
