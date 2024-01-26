@@ -78,7 +78,7 @@ watch(route, () => {
         color: 'btn-white',
     }" transparent />
     <header class="bg-gradient-dark">
-        <div class="page-header min-vh-35" :style="{ backgroundImage: `url(${bg})` }">
+        <div class="page-header min-vh-45" :style="{ backgroundImage: `url(${bg})` }">
             <span class="mask bg-gradient-dark opacity-6"></span>
             <div class="container">
                 <div class="row justify-content-center">

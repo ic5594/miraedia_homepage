@@ -135,7 +135,7 @@ const props = defineProps({
 
 const menuList = ref([
     {
-        menu: '회사소개', icon: Icon1, list: [{ name: '인사말', query: { type: 'greeting' } },
+        menu: '회사소개', icon: Icon1, list: [{ name: '주요취급품목', query: { type: 'greeting' } },
         { name: '주요거래선', query: { type: 'trading' } },
         { name: '약도', query: { type: 'map' } }]
     },

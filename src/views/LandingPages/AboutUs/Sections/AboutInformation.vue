@@ -21,17 +21,17 @@ watch(route, () => {
         <div class="container">
             <div class="row align-items-center" style="justify-content: center;">
                 <template v-if="query == 'greeting'">
-                    <h1 class="font-weight-bolder mt-2" style="text-align: center; color: #2f80ed;">인사말</h1>
+                    <h1 class="font-weight-bolder mt-2" style="text-align: center; color: #2f80ed;">주요취급품목</h1>
                     <div class="col-lg-8">
-                        <h3 class="font-weight-bolder mt-3">주요취급품목</h3>
+                        <!-- <h3 class="font-weight-bolder mt-3">주요취급품목</h3> -->
                         <br>
                         <div class="row justify-content-start">
-                            <DefaultInfoCard color="info" icon="electrodeposition" title="전착 다이아몬드" />
-                            <DefaultInfoCard color="info" icon="resin" title="레진 다이아몬드" />
+                            <DefaultInfoCard color="info" icon="Electro Plated Tool" title="전착 다이아몬드" />
+                            <DefaultInfoCard color="info" icon="Resin" title="레진 다이아몬드" />
                         </div>
                         <div class="row justify-content-start mt-4">
-                            <DefaultInfoCard color="info" icon="metal" title="메탈 다이아몬드" />
-                            <DefaultInfoCard color="info" icon="pcds" title="PCD & PCBN INSERT" />
+                            <DefaultInfoCard color="info" icon="Metal" title="메탈 다이아몬드" />
+                            <DefaultInfoCard color="info" icon="Pcds" title="PCD & PCBN INSERT" />
                         </div>
                     </div>
                 </template>

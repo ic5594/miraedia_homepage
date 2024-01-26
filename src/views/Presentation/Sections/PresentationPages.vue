@@ -5,12 +5,17 @@ import BlogCarImg from "@/assets/img/mireadia/cominto_01.png"
 import { ref, onUnmounted, onMounted } from 'vue'
 
 import Typed from "typed.js";
+import rejen_img from "@/assets/img/mireadia/main01.jpg"
+import ele_img from "@/assets/img/mireadia/main02.jpg"
+import pcd_img from "@/assets/img/mireadia/main03.jpg"
+import metal_img from "@/assets/img/mireadia/main04.jpg"
+
 
 const mainMenuList = ref([
-    { name: '레진 다이아몬드', img: 'src/assets/img/mireadia/main01.jpg', route: 'about', query: { type: 'cutter' } },
-    { name: '전착 다이아몬드', img: 'src/assets/img/mireadia/main02.jpg', route: 'about', query: { type: 'lotari' } },
-    { name: 'PCD & PCBN', img: 'src/assets/img/mireadia/main03.jpg', route: 'about', query: { type: 'pcd' } },
-    { name: '메탈 다이아몬드', img: 'src/assets/img/mireadia/main04.jpg', route: 'about', query: { type: 'metal' } }
+    { name: '레진 다이아몬드', img: rejen_img, route: 'about', query: { type: 'cutter' } },
+    { name: '전착 다이아몬드', img: ele_img, route: 'about', query: { type: 'lotari' } },
+    { name: 'PCD & PCBN', img: pcd_img, route: 'about', query: { type: 'pcd' } },
+    { name: '메탈 다이아몬드', img: metal_img, route: 'about', query: { type: 'metal' } }
 ])
 
 
