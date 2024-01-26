@@ -23,7 +23,7 @@
                 ? 'text-dark'
                 : 'font-weight-bolder ms-sm-3'
                 " to="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
-                <img src="../../assets/img/mireadia/new_logo_01.png" style="width: 4rem;"/>
+                <img src="../../assets/img/mireadia/new_logo_01.png" style="width: 8rem;"/>
             </RouterLink>
             <!-- <a
         href="https://www.creative-tim.com/product/vue-material-kit-pro"
