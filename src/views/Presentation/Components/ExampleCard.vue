@@ -62,10 +62,10 @@ export default {
             </svg>
         </div>
         <div class="mt-2 ms-2">
-            <p class="mb-0" style="text-align: center;">{{ title }}</p>
-            <p class="text-secondary text-sm font-weight-normal">
+            <h4 class="mb-0" style="text-align: center;">{{ title }}</h4>
+            <!-- <p class="text-secondary text-sm font-weight-normal">
                 {{ subtitle }}
-            </p>
+            </p> -->
         </div>
     </RouterLink>
 </template>

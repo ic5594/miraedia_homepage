@@ -15,7 +15,7 @@ const mainMenuList = ref([
     { name: '레진 다이아몬드', img: rejen_img, route: 'about', query: { type: 'cutter' } },
     { name: '전착 다이아몬드', img: ele_img, route: 'about', query: { type: 'lotari' } },
     { name: 'PCD & PCBN', img: pcd_img, route: 'about', query: { type: 'pcd' } },
-    { name: '메탈 다이아몬드', img: metal_img, route: 'about', query: { type: 'metal' } }
+    { name: '세라믹 브라켓', img: metal_img, route: 'about', query: { type: 'metal' } }
 ])
 
 
@@ -107,10 +107,12 @@ const mobileCheck = ref(window.innerWidth < 1350 ? true : false)
     align-items: center;
 }
 .main_card_list {
-    width: 100%;
+    width: 75%;
+    max-width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 </style>

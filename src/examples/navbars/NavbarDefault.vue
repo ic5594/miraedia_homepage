@@ -42,13 +42,13 @@
             <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
                 <ul class="navbar-nav navbar-nav-hover ms-auto">
                     <template v-for="(item) in menuList" :key="item">
-                        <li class="nav-item dropdown dropdown-hover mx-2">
+                        <li class="nav-item dropdown dropdown-hover mx-1" style="align-items: center;">
                             <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
                                 :class="getTextColor()" id="dropdownMenuPages" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img :src="item.icon" style="width: 2rem;">&nbsp;
+                                <img :src="item.icon" style="width: 1.4rem;">&nbsp;
                                 <!-- <i class="material-icons opacity-6 me-2 text-md" :class="getTextColor()">dashboard</i> -->
-                                {{ item.menu }}
+                                <h5>{{ item.menu }}</h5>
                                 <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-2 d-lg-block d-none" />
                                 <img :src="getArrowColor()" alt="down-arrow" class="arrow ms-1 d-lg-none d-block ms-auto" />
                             </a>
@@ -135,7 +135,7 @@ const props = defineProps({
 
 const menuList = ref([
     {
-        menu: '회사소개', icon: Icon1, list: [{ name: '주요취급품목', query: { type: 'greeting' } },
+        menu: '회사소개', icon: Icon1, list: [{ name: '취급품목', query: { type: 'greeting' } },
         { name: '주요거래선', query: { type: 'trading' } },
         { name: '약도', query: { type: 'map' } }]
     },
@@ -213,9 +213,5 @@ watch(
 <style scoped>
 .dropdown.nav-item .dropdown-menu-animation.show {
     height: 100% !important;
-}
-
-.navbar .nav-link{
-    font-size: 1.3rem;
 }
 </style>

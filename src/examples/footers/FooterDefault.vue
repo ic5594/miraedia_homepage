@@ -58,7 +58,7 @@ defineProps({
         <div class="container">
             <div class="row">
                 <div class="foot_area">
-                    <img :src="brand.logo" style="width: 12rem;" alt="main_logo" />
+                    <img :src="brand.logo" style="width: 15rem;" alt="main_logo" />
                     <br>
                 </div>
                 <div class="col-12">
