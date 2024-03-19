@@ -16,7 +16,7 @@ onMounted(() => {
 })
 
 const loadScript = () => {
-    const key = '0bb962b6fe8fe8a01a0a458fa5e4befb'   // env에 등록된 키 가져오기
+    const key = '0bb962b6fe8fe8a01a0a458fa5e4befb'
     const script = document.createElement('script')
     // 동적 로딩을 위해서 autoload=false 추가
     script.src = `//dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=${key}&libraries=services`
