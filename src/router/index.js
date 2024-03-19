@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import PresentationView from "../views/Presentation/PresentationView.vue";
 import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
 import AuthorView from "../views/LandingPages/Author/AuthorView.vue";
@@ -24,7 +24,7 @@ import ElToggles from "../layouts/sections/elements/toggles/TogglesView.vue";
 import ElTypography from "../layouts/sections/elements/typography/TypographyView.vue";
 
 const router = createRouter({
-    history: createWebHashHistory(import.meta.env.BASE_URL),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: "/",
